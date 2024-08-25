@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Log = ({ onSelectName }) => {
+const Log = ({ turns }) => {
 
     const sendData = () => {
         onSelectName("Hi from Child");
@@ -8,7 +8,7 @@ const Log = ({ onSelectName }) => {
     }
     return (
         <div>
-            <button onClick={sendData}>Send Data to Parent</button>
+            {turns.map(turn => <li key={`${turn.square.row}${turn.square.col}`}>{turn.player} selected {turn.square.row},{turn.square.col}</li>)}
         </div>
     )
 }

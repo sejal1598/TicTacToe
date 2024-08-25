@@ -5,14 +5,19 @@ const Player = ({ initialName, symbol, isActive }) => {
     const [inputTypeValue, setInputTypeValue] = useState(initialName)
 
     const handleChnage = () => {
-        console.log("h");
+
 
         setIsEditable((isEditable) => !isEditable)
     }
 
+
+
+
     const handleInputChange = (e) => {
         setInputTypeValue(e.target.value)
     }
+    console.log("inputTypeValue", inputTypeValue);
+
     return (
 
         <li className={isActive ? 'active' : 'undefined'}>
